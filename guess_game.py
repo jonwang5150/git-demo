@@ -5,22 +5,24 @@ import random
 # 3.提示區間
 
 
-x = random.randint(1, 50)
-print(x)
+x = random.randint(1, 100)
+
 win = False
-start, end = 1, 50
+start, end = 1, 100
 for i in range(5):
-    y = eval(input(f'{i+1}/5請猜一個數字(1~50之間):'))
+    y = eval(input(f'{i+1}/5請猜一個數字(1~100之間):'))
     if x == y:
         win = True
         break
 
     elif x > y:
-        if start < y:
+        if y > start:
+            # 如果y大於原本最小值再進行替換
             start = y
         print(f'猜大一點{start}~{end}')
     else:
-        if end > y:
+        # 如果y小於原本最高值再進行替換
+        if y < end:
             end = y
         print(f'猜小一點{start}~{end}')
 
