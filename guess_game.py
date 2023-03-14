@@ -10,7 +10,7 @@ print(x)
 win = False
 start, end = 1, 50
 for i in range(5):
-    y = eval(input(f'{i+1}/5請猜一個數字(1~50之間):'))
+    y = eval(input(f'{i+1}/5請猜一個數字({start}~{end}):'))
     if x == y:
         win = True
         break
@@ -18,11 +18,11 @@ for i in range(5):
     elif x > y:
         if start < y:
             start = y
-        print(f'猜大一點{start}~{end}')
+        print(f'猜大高一點')
     else:
         if end > y:
             end = y
-        print(f'猜小一點{start}~{end}')
+        print(f'猜小一點')
 
 if win:
     print(f'恭喜過關!總共猜了:{i+1}次')
