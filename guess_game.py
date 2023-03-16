@@ -5,10 +5,10 @@ import random
 # 3.提示區間
 
 
-x = random.randint(1, 50)
+x = random.randint(1, 100)
 print(x)
 win = False
-start, end = 1, 50
+start, end = 1, 100
 for i in range(5):
     y = eval(input(f'{i+1}/5請猜一個數字({start}~{end}):'))
     if x == y:
